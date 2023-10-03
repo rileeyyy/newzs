@@ -62,6 +62,32 @@ Until one day, all that changed.
 <img src="spot.png">
 <br>
 <img src="racetrack.png">
+<br>
+<h2>---COLOR CHANGER---</h2>
+  <br>
+	<select id="color-select">
+    <option value="">choose.</option>
+    <option value="#000000">Black</option>
+    <option value="#fc1201">Red</option>
+    <option value="#0043ff">Blue</option>
+    <option value="#84079d">Purple</option>
+    <option value="#2fff00">Green</option>
+    <option value="#9DC183">Sage Green</option>
+	</select>
+	<script>
+		const colorSelect = document.getElementById('color-select');
+		const body = document.querySelector('body');
+
+		if (localStorage.getItem('backgroundColor') !== null) {
+			body.style.backgroundColor = localStorage.getItem('backgroundColor');
+			colorSelect.value = localStorage.getItem('backgroundColor');
+		}
+		colorSelect.addEventListener('change', () => {
+			const selectedColor = colorSelect.value;
+			body.style.backgroundColor = selectedColor;
+			localStorage.setItem('backgroundColor', selectedColor);
+		});
+	</script>
 </div>
 </font>
 </body>
