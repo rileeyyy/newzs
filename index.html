@@ -4,6 +4,8 @@
 </title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+<audio id="bn"></audio>
+<audio id="kn"></audio>
 <body style="background-color:#000000;">
 <font color="white" style="font-family:Arial Black">
 <div align="center">
@@ -76,6 +78,11 @@ Until one day, all that changed.
     <option value="#DEA5A4">Pastel Pink</option>
     <option value="#9D7BB0">Lavender</option>
 	</select>
+<h2>---SONGS---</h2>
+  <br>
+	<button onclick="bn.play()">Carrying the Banner</button>
+	<br>
+	<button onclick="kn.play()">King of new york</button>
 	<script>
 		const colorSelect = document.getElementById('color-select');
 		const body = document.querySelector('body');
@@ -89,6 +96,10 @@ Until one day, all that changed.
 			body.style.backgroundColor = selectedColor;
 			localStorage.setItem('backgroundColor', selectedColor);
 		});
+		  var bn = new Audio();
+                  bn.src = "banner.mp3";
+		  var kn = new Audio();
+                  kn.src = "king.mp3";
 	</script>
 </div>
 </font>
